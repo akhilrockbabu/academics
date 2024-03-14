@@ -1,0 +1,5 @@
+a=set(map(int,input('enter the collection of inetegers').split()))
+b=set(map(int,input('enter the second collection of inetegers').split()))
+print('list are of same length:',len(a)==len(b))
+print('list sums to same value:',sum(a)==sum(b))
+print('same values occur in both:',bool(a and b))

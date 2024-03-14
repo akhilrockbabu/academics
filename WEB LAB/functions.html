@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>FUNCTIONS IN HTML</title>
+<body bgcolor="black">
+<br>
+<h1 align="center" style="color:orange">MARKLIST</h1><br><br><br>
+<form id="form1">
+<table align="center" height="20%" style="color:orange" border="5" cellpadding="5" class="table-primary">
+<tr>
+	<td align="center">NAME:&nbsp</td>
+	<td><input type="text" placeholder="enter your name" id="t1"></td>
+</tr>
+<tr>
+	<td align="center">SUBJECT:&nbsp</td>
+	<td><input type="text" placeholder="enter the subject" id="t2"></td>
+</tr>
+<tr>
+	<td align="center">MARKS:&nbsp</td>
+	<td><input type="text" placeholder="enter your Marks" id="t3"></td>
+</tr>
+<tr>
+	<td align="left"><input type="button" value="SHOW" style="color:red" onclick="repeat()"></td>
+	<td align="left"><input type="button" value="RESET" style="color:red" onclick="refresh()"></td>
+</tr>
+</table>
+</form>
+<script>
+function repeat()
+{
+	var name=document.getElementById("t1").value;
+	var sub=document.getElementById("t2").value;
+	var mark=document.getElementById("t3").value;
+	document.write("<br>NAME :"+name);
+	document.write("<br><br> SUBJECT :"+sub);
+	document.write("<br><br> MARKS :"+mark);
+}
+function refresh()
+{
+	document.getElementById("form1").reset();
+}
+</script>
+</body>
+</head>
+</html>
