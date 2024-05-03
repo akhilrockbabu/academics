@@ -15,7 +15,6 @@ class Prgrm15
 		Scanner s=new Scanner(System.in);
 		System.out.println("enter the number elements to array");
 		n=s.nextInt();
-		int arr[]=new int[n];
 		System.out.println("enter the numbers in array");
 		for(int i=0;i<n;++i)
 		{
@@ -28,16 +27,14 @@ class Prgrm15
 					throw new Neg("the number is negative please re-enter it!");
 				}
 				else
-					arr[i]=a;
+				{
+					avg=avg+a;
+				}
 			}
 			catch(Neg e)
 			{
 				System.out.println(e);
 			}
-		}
-		for(int i=0;i<n;i++)
-		{
-			avg=avg+arr[i];
 		}
 		System.out.println("Average of integers= "+avg/n);
 	}
