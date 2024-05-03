@@ -25,7 +25,7 @@ class Prgrm15
 				if(a<0)
 				{
 					--i;
-					throw new Neg("the number is negative");
+					throw new Neg("the number is negative please re-enter it!");
 				}
 				else
 					arr[i]=a;
