@@ -1,0 +1,83 @@
+create table shop(item varchar(30),price INT);
+
+insert into shop values('soap',10);
+insert into shop values('biscuit',20);
+insert into shop values('chocolate',50);
+insert into shop values('laptop',1500);
+insert into shop values('keyboard',250);
+
+commit;
+
+select * from shop;
+
+ITEM				    PRICE
+------------------------------ ----------
+soap				       10
+biscuit 			       20
+chocolate			       50
+laptop				     1500
+keyboard			      250
+
+insert into shop values('mouse',150);
+insert into shop values('towel',110);
+
+savepoint A;
+
+select * from shop;
+
+ITEM				    PRICE
+------------------------------ ----------
+soap				       10
+biscuit 			       20
+chocolate			       50
+laptop				     1500
+keyboard			      250
+mouse				      150
+towel				      110
+
+insert into shop values('eraser',5);
+insert into shop values('pen',15);
+
+savepoint B;
+
+select * from shop;
+
+ITEM				    PRICE
+------------------------------ ----------
+soap				       10
+biscuit 			       20
+chocolate			       50
+laptop				     1500
+keyboard			      250
+mouse				      150
+towel				      110
+eraser					5
+pen				       15
+
+
+rollback to A;
+
+select * from shop;
+
+ITEM				    PRICE
+------------------------------ ----------
+soap				       10
+biscuit 			       20
+chocolate			       50
+laptop				     1500
+keyboard			      250
+mouse				      150
+towel				      110
+
+rollback;
+
+select * from shop;
+
+ITEM				    PRICE
+------------------------------ ----------
+soap				       10
+biscuit 			       20
+chocolate			       50
+laptop				     1500
+keyboard			      250
+

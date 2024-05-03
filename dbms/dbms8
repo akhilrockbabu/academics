@@ -1,0 +1,98 @@
+sqlplus sys as sysdba
+
+sho user;
+USER is "SYS"
+
+select * from all_users;
+
+USERNAME			  USER_ID CREATED
+------------------------------ ---------- --------
+XS$NULL 		       2147483638 28-08-11
+APEX_040000			       47 28-08-11
+APEX_PUBLIC_USER		       45 28-08-11
+FLOWS_FILES			       44 28-08-11
+HR				       43 28-08-11
+MDSYS				       42 28-08-11
+ANONYMOUS			       35 28-08-11
+XDB				       34 28-08-11
+CTXSYS				       32 28-08-11
+OUTLN					9 28-08-11
+SYSTEM					5 28-08-11
+
+USERNAME			  USER_ID CREATED
+------------------------------ ---------- --------
+SYS					0 28-08-11
+
+
+select * from tab;
+
+create user akhil identified by akhil;    
+
+User created.
+
+grant resource,connect to akhil;
+
+Grant succeeded.
+
+connect akhil/akhil;
+Connected.
+
+create table nm(name varchar(30),age int);
+insert into nm values('akhil',21);
+insert into nm values('albert',22);
+
+select * from nm;
+
+NAME				      AGE
+------------------------------ ----------
+akhil				       21
+albert				       22
+
+grant dba to akhil with admin option;
+Grant succeeded.
+
+create user albert identified by albu;
+User created.
+
+grant resource,connect to albert;
+Grant succeeded.
+
+connect albert/albu;
+Connected.
+
+select * from nm;
+table or view does not exist
+
+connect akhil/akhil;
+Connected.
+
+grant select,insert on nm to albert with grant option;
+Grant succeeded.
+
+connect albert/albu;
+Connected.
+
+select * from akhil.nm;
+
+NAME				      AGE
+------------------------------ ----------
+akhil				       21
+albert				       22
+
+
+connect akhil/akhil;
+Connected.
+
+revoke select on nm from albert;
+Revoke succeeded.
+
+revoke dba from akhil;
+Revoke succeeded.
+
+
+
+
+
+
+
+
