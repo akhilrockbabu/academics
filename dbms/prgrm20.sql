@@ -1,3 +1,4 @@
+set serveroutput on
 create or replace trigger t2 after insert or update on xy
 begin
 if inserting
