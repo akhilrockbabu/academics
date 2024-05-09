@@ -1,0 +1,217 @@
+use employee
+switched to db employee
+
+db.createCollection("employeedetails")
+{ ok: 1 }
+
+db.employeedetails.insertMany([{empid:101,empname:"ram",salary:15000,designation:"clerk"},{empid:102,empname:"shyam",salary:20000,designation:"administrator"},{empid:103,empname:"hari",salary:10000,designation:"supervisor"},{empid:104,empname:"sita",salary:15000,designation:"clerk"},{empid:106,empname:"maria",salary:25000,designation:"manager"},{empid:105,empname:"rose",salary:20000,designation:"administrator"}])
+
+acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('663cf597b21a08667946b799'),
+    '1': ObjectId('663cf597b21a08667946b79a'),
+    '2': ObjectId('663cf597b21a08667946b79b'),
+    '3': ObjectId('663cf597b21a08667946b79c'),
+    '4': ObjectId('663cf5f1b21a08667946b79d'),
+    '5': ObjectId('663cf5f1b21a08667946b79e')
+    }
+   }
+
+
+db.employeedetails.find().pretty()
+[
+  {
+    _id: ObjectId('663cf36880ada6d6c746b799'),
+    _empid: 101,
+    empname: 'Ram',
+    salary: 15000,
+    designation: 'clerk'
+  },
+  {
+    _id: ObjectId('663cf36880ada6d6c746b79a'),
+    _empid: 102,
+    empname: 'shyam',
+    salary: 20000,
+    designation: 'adminstrator'
+  },
+  {
+    _id: ObjectId('663cf36880ada6d6c746b79b'),
+    _empid: 103,
+    empname: 'hari',
+    salary: 10000,
+    designation: 'supervisor'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b799'),
+    empid: 101,
+    empname: 'ram',
+    salary: 15000,
+    designation: 'clerk'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79a'),
+    empid: 102,
+    empname: 'shyam',
+    salary: 20000,
+    designation: 'administrator'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79b'),
+    empid: 103,
+    empname: 'hari',
+    salary: 10000,
+    designation: 'supervisor'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79c'),
+    empid: 104,
+    empname: 'sita',
+    salary: 15000,
+    designation: 'clerk'
+  },
+  {
+    _id: ObjectId('663cf5f1b21a08667946b79d'),
+    empid: 106,
+    empname: 'maria',
+    salary: 25000,
+    designation: 'manager'
+  },
+  {
+    _id: ObjectId('663cf5f1b21a08667946b79e'),
+    empid: 105,
+    empname: 'rose',
+    salary: 20000,
+    designation: 'administrator'
+  }
+]
+
+
+db.employeedetails.find({empname:{$regex:/^s/}})
+[
+  {
+    _id: ObjectId('663cf36880ada6d6c746b79a'),
+    _empid: 102,
+    empname: 'shyam',
+    salary: 20000,
+    designation: 'adminstrator'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79a'),
+    empid: 102,
+    empname: 'shyam',
+    salary: 20000,
+    designation: 'administrator'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79c'),
+    empid: 104,
+    empname: 'sita',
+    salary: 15000,
+    designation: 'clerk'
+  }
+]
+
+
+db.employeedetails.findOneAndUpdate({empid:101},{$set:{DOJ:"02/06/2023"}})
+{
+  _id: ObjectId('663cf597b21a08667946b799'),
+  empid: 101,
+  empname: 'ram',
+  salary: 15000,
+  designation: 'clerk'
+}
+db.employeedetails.findOneAndUpdate({empid:102},{$set:{DOJ:"02/06/2023"}})
+{
+  _id: ObjectId('663cf597b21a08667946b79a'),
+  empid: 102,
+  empname: 'shyam',
+  salary: 20000,
+  designation: 'administrator'
+}
+employee> db.employeedetails.findOneAndUpdate({empid:103},{$set:{DOJ:"02/06/2023"}})
+{
+  _id: ObjectId('663cf597b21a08667946b79b'),
+  empid: 103,
+  empname: 'hari',
+  salary: 10000,
+  designation: 'supervisor'
+}
+employee> db.employeedetails.findOneAndUpdate({empid:104},{$set:{DOJ:"02/06/2023"}})
+{
+  _id: ObjectId('663cf597b21a08667946b79c'),
+  empid: 104,
+  empname: 'sita',
+  salary: 15000,
+  designation: 'clerk'
+}
+employee> db.employeedetails.findOneAndUpdate({empid:105},{$set:{DOJ:"02/06/2023"}})
+{
+  _id: ObjectId('663cf5f1b21a08667946b79e'),
+  empid: 105,
+  empname: 'rose',
+  salary: 20000,
+  designation: 'administrator'
+}
+employee> db.employeedetails.findOneAndUpdate({empid:106},{$set:{DOJ:"02/06/2023"}})
+{
+  _id: ObjectId('663cf5f1b21a08667946b79d'),
+  empid: 106,
+  empname: 'maria',
+  salary: 25000,
+  designation: 'manager'
+}
+employee> db.employeedetails.find().pretty()
+[
+  {
+    _id: ObjectId('663cf597b21a08667946b799'),
+    empid: 101,
+    empname: 'ram',
+    salary: 15000,
+    designation: 'clerk',
+    DOJ: '02/06/2023'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79a'),
+    empid: 102,
+    empname: 'shyam',
+    salary: 20000,
+    designation: 'administrator',
+    DOJ: '02/06/2023'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79b'),
+    empid: 103,
+    empname: 'hari',
+    salary: 10000,
+    designation: 'supervisor',
+    DOJ: '02/06/2023'
+  },
+  {
+    _id: ObjectId('663cf597b21a08667946b79c'),
+    empid: 104,
+    empname: 'sita',
+    salary: 15000,
+    designation: 'clerk',
+    DOJ: '02/06/2023'
+  },
+  {
+    _id: ObjectId('663cf5f1b21a08667946b79d'),
+    empid: 106,
+    empname: 'maria',
+    salary: 25000,
+    designation: 'manager',
+    DOJ: '02/06/2023'
+  },
+  {
+    _id: ObjectId('663cf5f1b21a08667946b79e'),
+    empid: 105,
+    empname: 'rose',
+    salary: 20000,
+    designation: 'administrator',
+    DOJ: '02/06/2023'
+  }
+]
+
+
+
+
