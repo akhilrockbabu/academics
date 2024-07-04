@@ -11,7 +11,7 @@ class Prgrm17a
 			BufferedReader br1=new BufferedReader(in);
 			System.out.println("enter the string");	
 			s=br1.readLine();
-			FileWriter fw=new FileWriter("/home/user/academics/java/prgrm17a.txt");
+			FileWriter fw=new FileWriter("D:/Codes/academics/java/prgrm17a.txt");
 			BufferedWriter bw=new BufferedWriter(fw);
 			bw.append(s);
 			bw.newLine();
@@ -19,7 +19,7 @@ class Prgrm17a
 			bw.close();
 			System.out.println("Current File Content is : ");
 
-			FileReader fr=new FileReader("/home/user/academics/java/prgrm17a.txt");
+			FileReader fr=new FileReader("D:/Codes/academics/java/prgrm17a.txt");
 			BufferedReader br2=new BufferedReader(fr);
 			while((s=br2.readLine())!=null)
 			{
