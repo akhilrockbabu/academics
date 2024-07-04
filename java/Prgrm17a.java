@@ -1,6 +1,6 @@
 import java.io.*;
 
-class Prgrm17
+class Prgrm17a
 {
 	public static void main(String arg[]) throws IOException
 	{
@@ -11,13 +11,15 @@ class Prgrm17
 			BufferedReader br1=new BufferedReader(in);
 			System.out.println("enter the string");	
 			s=br1.readLine();
-			FileWriter fw=new FileWriter("/home/user/academics/java/prgrm17.txt");
+			FileWriter fw=new FileWriter("/home/user/academics/java/prgrm17a.txt");
 			BufferedWriter bw=new BufferedWriter(fw);
-			bw.write(s);
-			bw.append("data appended");
+			bw.append(s);
+			bw.newLine();
+			System.out.println("File Updated Successfully !");
 			bw.close();
-			
-			FileReader fr=new FileReader("/home/user/academics/java/prgrm17.txt");
+			System.out.println("Current File Content is : ");
+
+			FileReader fr=new FileReader("/home/user/academics/java/prgrm17a.txt");
 			BufferedReader br2=new BufferedReader(fr);
 			while((s=br2.readLine())!=null)
 			{
