@@ -1,4 +1,4 @@
-from collections import deque
+'''from collections import deque
 
 def bfs_shortest_path(graph,start,goal):
     visited=set()
@@ -30,7 +30,14 @@ graph={
 }
 
 shortest_path=bfs_shortest_path(graph,'1','6')
-print("shortest path : ",shortest_path)
+print("shortest path : ",shortest_path)'''
 
 
 #github.com/zakbasil/Algorithms
+def cite(citations):
+    citations.sort()
+    for i in range(len(citations)):
+        if citations[i]==len(citations[i:]):
+            return citations[i]
+
+print(cite(list(map(int,input('enter the list').split()))))

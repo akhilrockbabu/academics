@@ -18,7 +18,7 @@ class Prgrm6
 		{
 			for(int j=i+1;j<n;++j)
 			{
-				if(str[i].compareTo(str[j])>0)
+				if((str[i].toLowerCase()).compareTo(str[j].toLowerCase())>0)
 				{
 					String temp=str[i];
 					str[i]=str[j];

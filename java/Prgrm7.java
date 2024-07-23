@@ -4,11 +4,13 @@ class Prgrm7
 	{
 		String str="    Hello, Akhil    ";
 
+		System.out.println("length = "+str.length());
+
 		System.out.println("Concatinated String : "+str.concat("Welcome to java ")+"\n"); 
 
-		System.out.println("Substring from index 11 : "+str.substring(11)+"\n");
+		System.out.println("Substring from index 11 : "+str.substring(11,15)+"\n");
 
-		System.out.println("Starting index of Akhil is : "+str.indexOf("Akhil")+"\n");
+		System.out.println("Starting index of H is : "+str.indexOf("K")+"\n");
 
 		System.out.println("Replaced String is : "+str.replace("Akhil","Rockiey")+"\n");
 
