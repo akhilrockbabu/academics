@@ -1,0 +1,24 @@
+S3 MCA (2023-25 Batch)
+20MCA241 Data Science Lab
+Lab Exercise #03
+Date of Submission: 24 Aug 2024
+1. Learn Exploratory Data Analysis using the following links and prepare your own worksheet. • https://gist.github.com/rabiulcste/33d985ab55820353181f9727a9496a81 
+2. Download the dataset iris.csv from the following link
+• https://gist.github.com/netj/8836201/archive/6f9306ad21398ea43cba4f7d537619d0e07d5 ae3.zip 
+• Using Python, visualize the various characteristics of the dataset.
+• Use Google Colab for implementation.
+• Define your own conditions to learn the characteristics
+• After each visualization write your findings
+• Use the following types of charts for visualization:
+1. Histogram
+2. Quartile (Box) plot
+3. Distribution chart
+4. Scatterplot
+5. Scatter multiple
+6. Scatter matrix
+7. Bubble chart
+8. Density chart
+9. Parallel chart
+10. Deviation chart
+11. Andrews curves
+
