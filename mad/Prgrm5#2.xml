@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondAct">
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        android:text="YOUR DETAILS"
+        android:textSize="45sp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv2"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="20dp"
+        android:text="Password: "
+        android:textSize="45sp"
+        android:padding="5dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv3"
+        android:layout_below="@+id/tv2"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="20dp"
+        android:text="Password: "
+        android:textSize="45sp"
+        android:padding="5dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt1"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="LOGIN"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tv3"
+        android:textColor="@color/white"/>
+
+
+
+
+
+</RelativeLayout>
